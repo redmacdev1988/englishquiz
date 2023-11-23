@@ -24,7 +24,7 @@ const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
   @media ${device.md} {
     width: 100%;
     padding: 15px 15px 80px 15px;
-  }
+  }·
   button {
     span {
       svg {

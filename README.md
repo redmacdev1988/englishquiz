@@ -1,10 +1,7 @@
-# Xeven Quiz - ReactJS Quiz App Template Code Documentations
+ReactJS Quiz App Template Code Documentations
 
 Welcome to the Code Quiz App documentation! This guide will walk you through the steps to start using and customizing the app according to your needs. The Code Quiz App is designed to help you create interactive quizzes with various question types, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions.
 
-## Demo App
-
-To experience the Demo App, visit the link: https://xeven-quiz.vercel.app/
 
 ## **How to Start a Project**
 
@@ -34,7 +31,7 @@ Understanding the folder structure is essential for working with the app. Here's
 
 ### Components Architecture
 
-The **Xeven Quiz App** consists of 5 main screens/components that are displayed conditionally:
+The **Quiz App** consists of 5 main screens/components that are displayed conditionally:
 
 1. Splash Screen
 2. Quiz Topics Screen
@@ -165,7 +162,7 @@ Each question supports a **`code`** key, which is conditionally shown only if th
 
 ### How to format code snippet
 
-In the Xeven Quiz App, code snippets are pieces of code represented as text. To make them look nice and readable, we use an npm package called **`prismjs`**. This tool highlights the code with different colors so that it stands out and is easy to understand.
+In the Quiz App, code snippets are pieces of code represented as text. To make them look nice and readable, we use an npm package called **`prismjs`**. This tool highlights the code with different colors so that it stands out and is easy to understand.
 
 To display code correctly, we need to pay attention to the spaces and how the code is structured, just like we do with the existing questions. This way, the code will appear neatly formatted and will be easier for users to read and comprehend.
 
@@ -204,4 +201,4 @@ The next app update, scheduled for September 2023, will bring exciting new featu
 2. Image support in Quiz Questions.
 3. Faster Typography with Typography Styled components
 
-I hope this documentation helps you get started with the Xeven Quiz App. If you have any questions or feedback, please feel free to reach out to me at **[abdul_basit313@outlook.com](mailto:abdul_basit313@outlook.com)**. Happy quizzing!
+I hope this documentation helps you get started with the Quiz App. If you have any questions or feedback, please feel free to reach out to me at **[abdul_basit313@outlook.com](mailto:abdul_basit313@outlook.com)**. Happy quizzing!
