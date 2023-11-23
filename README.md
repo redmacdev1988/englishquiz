@@ -200,5 +200,3 @@ The next app update, scheduled for September 2023, will bring exciting new featu
 1. Dark mode support.
 2. Image support in Quiz Questions.
 3. Faster Typography with Typography Styled components
-
-I hope this documentation helps you get started with the Quiz App. If you have any questions or feedback, please feel free to reach out to me at **[abdul_basit313@outlook.com](mailto:abdul_basit313@outlook.com)**. Happy quizzing!
