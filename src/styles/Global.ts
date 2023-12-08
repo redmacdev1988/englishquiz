@@ -209,10 +209,10 @@ export const LogoContainer = styled.div`
   svg {
     width: 220px;
     rect {
-      stroke: ${({ theme }) => theme.colors.appLogo};
+      // stroke: ${({ theme }) => theme.colors.appLogo};
     }
     path {
-      fill: ${({ theme }) => theme.colors.appLogo};
+      // fill: ${({ theme }) => theme.colors.appLogo};
     }
   }
 `
