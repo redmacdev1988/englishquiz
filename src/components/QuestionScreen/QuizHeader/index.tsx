@@ -35,22 +35,23 @@ const TotalQuestionNo = styled.span`
 `
 
 interface QuizHeaderProps {
-  activeQuestion: number
+  activeQuestions: number
   totalQuestions: number
   timer: number
   skipped?: boolean
 }
 
 const QuizHeader: FC<QuizHeaderProps> = ({
-  activeQuestion,
+  activeQuestions,
   totalQuestions,
   timer,
   skipped,
 }) => {
+
   return (
     <Flex spaceBetween gap="6px">
       <div>
-        <ActiveQuestionNo>{addLeadingZero(activeQuestion + 1)}</ActiveQuestionNo>
+        <ActiveQuestionNo>{addLeadingZero(activeQuestions + 1)}</ActiveQuestionNo>
         <TotalQuestionNo>/{addLeadingZero(totalQuestions)}</TotalQuestionNo>
       </div>
       <Flex>

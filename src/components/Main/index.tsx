@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-
 import { useQuiz } from '../../context/QuizContext'
 import { ScreenTypes } from '../../types'
 

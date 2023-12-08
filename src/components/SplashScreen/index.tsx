@@ -16,6 +16,8 @@ const LogoAnimation = styled.div<LogoAnimationProps>`
 `
 
 const SplashScreen = () => {
+ 
+
   const [logoSize, setLogoSize] = useState('80px')
 
   useEffect(() => {

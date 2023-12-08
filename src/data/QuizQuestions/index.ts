@@ -1,9 +1,9 @@
-import { generalKnowledge } from './generalKnowledge'
-import { javascript } from './javascript'
-import { python } from './python'
-import { react } from './react'
-import { subjverbagreement } from './subjverbagreement'
-import { article } from './article'
+import {generalKnowledge} from './generalKnowledge'
+import {javascript} from './javascript'
+import {python} from './python'
+import {react} from './react'
+import {randomQuestion, subjverbagreement} from './subjverbagreement'
+import {article} from './article'
 
 // Question Types
 // 1. MCQs | Multiple Choice | single
@@ -14,28 +14,32 @@ type Choice = string
 type CorrectAnswers = string[]
 
 export type Question = {
-  question: string
-  choices: Choice[]
-  type: 'MCQs' | 'MAQs' | 'write' | 'boolean'
-  correctAnswers: CorrectAnswers
-  score: number
-  code?: string
-  image?: string
+    question: string
+    choices: Choice[]
+    type: 'MCQs' | 'MAQs' | 'write' | 'boolean'
+    correctAnswers: CorrectAnswers
+    score: number
+    code?: string
+    image?: string
 }
 
 export type Topic = {
-  topic: string
-  level: string
-  totalQuestions: number
-  totalScore: number
-  totalTime: number
-  questions: Question[]
+    topic: string
+    level: string
+    totalQuestions: number
+    totalScore: number
+    totalTime: number
+    activeQuestions: number
+    questions: Question[]
 }
 
+
+
 export const quiz: Record<string, Topic> = {
-  Article: article,
-  SubVerbAgree: subjverbagreement,
-  React: react,
-  Python: python,
-  'General Knowledge': generalKnowledge,
+    Article: article,
+    SubVerbAgree: randomQuestion(),
+    React: react,
+    Python: python,
+    'General Knowledge': generalKnowledge,
 }
+

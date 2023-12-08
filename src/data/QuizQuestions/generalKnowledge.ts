@@ -17,6 +17,7 @@ export const generalKnowledge: Topic = {
   totalQuestions: 6,
   totalScore: 60,
   totalTime: 60,
+  activeQuestions: 6,
   questions: [
     {
       question: 'What is the name of this reptile?',

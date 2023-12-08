@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-
+import { useLocation } from 'react-router-dom';
 import { AppLogo, StartIcon } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
 import { useShuffleQuestions } from '../../hooks'
+import qs from 'qs'
+
 import {
   CenterCardContainer,
   HighlightedText,
@@ -39,8 +41,11 @@ const DetailText = styled.p`
 const QuizDetailsScreen = () => {
   const { setCurrentScreen, quizDetails } = useQuiz()
 
-  const { selectedQuizTopic, totalQuestions, totalScore, totalTime } = quizDetails
+  const { selectedQuizTopic, totalQuestions, totalScore, totalTime, activeQuestions } = quizDetails
+  let location = useLocation();
+  let params = qs.parse(location.search.slice(1))
 
+  console.log("当前路径"+location.search)
   const goToQuestionScreen = () => {
     setCurrentScreen(ScreenTypes.QuestionScreen)
   }
@@ -57,12 +62,22 @@ const QuizDetailsScreen = () => {
         <AppTitle> QUIZ</AppTitle>
         <DetailTextContainer>
           <DetailText>
-            Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
+            当前路径: <HighlightedText>{qs.stringify(params)}</HighlightedText>
           </DetailText>
           <DetailText>
+            Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
+          </DetailText>
+          {/* <DetailText>
             Total questions to attempt:{' '}
             <HighlightedText>{totalQuestions}</HighlightedText>
+          </DetailText> */}
+
+          <DetailText>
+            Questions to attempt:{' '}
+            <HighlightedText>{activeQuestions}</HighlightedText>
           </DetailText>
+
+
           <DetailText>
             Score in total: <HighlightedText>{totalScore}</HighlightedText>
           </DetailText>

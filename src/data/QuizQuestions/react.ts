@@ -10,6 +10,7 @@ export const react: Topic = {
   topic: 'React',
   level: 'Intermediate',
   totalQuestions: 11,
+  activeQuestions: 10,
   totalScore: 95,
   totalTime: 600,
   questions: [

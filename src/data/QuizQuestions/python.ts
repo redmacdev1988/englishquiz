@@ -11,6 +11,7 @@ export const python: Topic = {
   totalQuestions: 14,
   totalScore: 125,
   totalTime: 360,
+  activeQuestions: 14,
   questions: [
     {
       question:

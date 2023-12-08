@@ -20,6 +20,7 @@ const initialState: QuizContextTypes = {
   setEndTime: () => {},
   quizDetails: {
     totalQuestions: 0,
+    activeQuestions: 0,
     totalScore: 0,
     totalTime: 0,
     selectedQuizTopic: 'SubVerbAgree',
@@ -38,8 +39,6 @@ type QuizProviderProps = {
 
 const QuizProvider = ({ children }: QuizProviderProps) => {
 
-  console.log(initialState.result, initialState.quizTopic);
-
   const [timer, setTimer] = useState<number>(initialState.timer)
   const [endTime, setEndTime] = useState<number>(initialState.endTime)
   const [quizTopic, setQuizTopic] = useState<string>(initialState.quizTopic)
@@ -50,11 +49,8 @@ const QuizProvider = ({ children }: QuizProviderProps) => {
 
   const [questions, setQuestions] = useState(quiz[initialState.quizTopic].questions)
 
-  console.log('quizTopic: ', quizTopic);
-  
-  console.log('quiz: ', quiz[quizTopic]);
+  const { questions: quizQuestions, totalQuestions, totalTime, totalScore, activeQuestions } = quiz[quizTopic]
 
-  const { questions: quizQuestions, totalQuestions, totalTime, totalScore } = quiz[quizTopic]
 
   const selectQuizTopic = (topic: string) => {
     console.log('lets select topic: ', topic);
@@ -68,6 +64,7 @@ const QuizProvider = ({ children }: QuizProviderProps) => {
   }, [quizTopic])
 
   const quizDetails = {
+    activeQuestions,
     totalQuestions,
     totalScore,
     totalTime,
